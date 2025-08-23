@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Home Page</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- daisyui CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class=" bg-[#F4F5F7] h-[100vh]">
+
+    <div class="bg-white max-w-lg mx-auto rounded-b-2xl">
+      <div class="flex items-center justify-between border-b border-gray-300 p-3">
+        <div class="flex items-center">
+          <img src="./assets/group.png" alt="" />
+          <div>
+            <h2 class="font-extrabold text-lg text-[#080808]">
+              $<span>4500</span>
+            </h2>
+            <p class="text-[#08080880]">Available Balance</p>
+          </div>
+        </div>
+        <button class="btn rounded-lg text-[#08080880]">
+          <i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-[#08080899]"></i>Logout
+        </button>
+      </div>
+  
+      <div class="mt-6 p-3">
+        <h1 class="text-xl font-bold">🔥 Welcome to Payooo!</h1>
+        <p class="text-[#08080880]">Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
+      </div>
+  
+      <div class="mt-6 grid grid-cols-3 gap-4 p-3">
+        <div class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100">
+          <img src="./assets/wallet1.png" alt="" class="mx-auto">
+          <p class="text-[#080808]/70 text-center">Add Money</p>
+        </div>
+        <div class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100">
+          <img src="./assets/cashout.png" alt="" class="mx-auto">
+          <p class="text-[#080808]/70 text-center">Cashout</p>
+        </div>
+        <div class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100">
+          <img src="./assets/transfer.png" alt="" class="mx-auto">
+          <p class="text-[#080808]/70 text-center">Transfer Money</p>
+        </div>
+        <div class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100">
+          <img src="./assets/bonus1.png" alt="" class="mx-auto">
+          <p class="text-[#080808]/70 text-center">Get Bonus</p>
+        </div>
+        <div class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100">
+          <img src="./assets/paybill.png" alt="" class="mx-auto">
+          <p class="text-[#080808]/70 text-center">Pay Bill</p>
+        </div>
+        <div class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100">
+          <img src="./assets/transaction1.png" alt="" class="mx-auto">
+          <p class="text-[#080808]/70 text-center">Transaction</p>
+        </div>
+        
+  
+      </div>
+    </div>
+    
+    <div class="form-section">
+      <div>
+        <h1>Add Money</h1>
+        <form action="">
+          <div>
+            <h1>Select A Bank</h1>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
