@@ -30,7 +30,7 @@
           <img src="./assets/group.png" alt="" />
           <div>
             <h2 class="font-extrabold text-lg text-[#080808]">
-              $<span>4500</span>
+              $<span id="available-balance">4500</span>
             </h2>
             <p class="text-[#08080880]">Available Balance</p>
           </div>
@@ -97,7 +97,7 @@
         <form action="" class="bg-white rounded-2xl p-6">
           <div class="mb-4">
             <label class="text-[#080808] font-medium">Select A Bank</label>
-            <select class="select bg-[#F4F5F7] rounded-full w-full mt-3">
+            <select id="bank" class="select bg-[#F4F5F7] rounded-full w-full mt-3">
               <option disabled selected>Select bank</option>
               <option>AB Bank</option>
               <option>IFIC Bank</option>
@@ -110,7 +110,7 @@
               >Bank Account Number</label
             >
             <input
-              id="bank-account-number"
+              id="account-number"
               type="text"
               placeholder="Enter 11 digit account number"
               class="input input-ghost bg-[#F4F5F7] rounded-full w-full mt-2"
@@ -122,7 +122,7 @@
               >Amount to Add</label
             >
             <input
-              id="amount"
+              id="add-amount"
               type="text"
               placeholder="Add Amount to withdraw"
               class="input input-ghost bg-[#F4F5F7] rounded-full w-full mt-2"
@@ -132,7 +132,7 @@
           <div class="mb-4">
             <label for="" class="text-[#080808] font-medium">Pin Number</label>
             <input
-              id="pin-number"
+              id="add-pin"
               type="text"
               placeholder="Enter 4 digit pin number"
               class="input input-ghost bg-[#F4F5F7] rounded-full w-full mt-2"
@@ -140,7 +140,7 @@
           </div>
 
           <button
-            id="addMoney-btn"
+            id="add-money-btn"
             class="btn bg-[#0874F2] text-white rounded-full w-full p-6"
           >
             Add Money
@@ -148,5 +148,6 @@
         </form>
       </div>
     </div>
+    <script src="./home.js"></script>
   </body>
 </html>
