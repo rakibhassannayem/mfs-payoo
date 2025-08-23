@@ -69,19 +69,18 @@ document.getElementById("transfer-btn").addEventListener("click", function (e) {
 
 // toggling
 document.getElementById("add-money").addEventListener("click", function () {
-  document.getElementById("cashout-parent").style.display = "none";
-  document.getElementById("transfer-parent").style.display = "none";
-  document.getElementById("add-money-parent").style.display = "block";
+  handleToggle("add-money-parent");
+  handleButtonToggle("add-money");
 });
+
 document.getElementById("cashout").addEventListener("click", function () {
-  document.getElementById("add-money-parent").style.display = "none";
-  document.getElementById("transfer-parent").style.display = "none";
-  document.getElementById("cashout-parent").style.display = "block";
+  handleToggle("cashout-parent");
+  handleButtonToggle("cashout");
 });
+
 document.getElementById("transfer").addEventListener("click", function () {
-  document.getElementById("add-money-parent").style.display = "none";
-  document.getElementById("cashout-parent").style.display = "none";
-  document.getElementById("transfer-parent").style.display = "block";
+  handleToggle("transfer-parent");
+  handleButtonToggle("transfer");
 });
 
 // funcitons to get input values
@@ -103,8 +102,30 @@ function getInnerText(id) {
   const elementValueNumber = parseInt(elementValue);
   return elementValueNumber;
 }
-// // functions to set innerTexts
+// functions to set innerTexts
 function setInnerText(value) {
   const newValue = document.getElementById("available-balance");
   newValue.innerText = value;
+}
+
+//function to handle toggle
+function handleToggle(id) {
+  const forms = document.getElementsByClassName("form");
+  for (const form of forms) {
+    form.style.display = "none";
+  }
+  document.getElementById(id).style.display = "block";
+}
+
+// function to toggle buttons
+function handleButtonToggle(id) {
+  const formBtns = document.getElementsByClassName("main-btn");
+
+  for (const btn of formBtns) {
+    btn.classList.remove("border-blue-700", "bg-[#0874f20d]");
+    btn.classList.add("border-[#0808081A]");
+  }
+  document
+    .getElementById(id)
+    .classList.add("border-blue-700", "bg-[#0874f20d]");
 }
