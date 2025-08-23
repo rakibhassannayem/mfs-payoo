@@ -21,10 +21,11 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class=" bg-[#F4F5F7] h-[100vh]">
-
+  <body class="bg-[#F4F5F7]">
     <div class="bg-white max-w-lg mx-auto rounded-b-2xl">
-      <div class="flex items-center justify-between border-b border-gray-300 p-3">
+      <div
+        class="flex items-center justify-between border-b border-gray-300 p-3"
+      >
         <div class="flex items-center">
           <img src="./assets/group.png" alt="" />
           <div>
@@ -35,53 +36,115 @@
           </div>
         </div>
         <button class="btn rounded-lg text-[#08080880]">
-          <i class="fa-solid fa-arrow-right-from-bracket rotate-180 text-[#08080899]"></i>Logout
+          <i
+            class="fa-solid fa-arrow-right-from-bracket rotate-180 text-[#08080899]"
+          ></i
+          >Logout
         </button>
       </div>
-  
+
       <div class="mt-6 p-3">
         <h1 class="text-xl font-bold">🔥 Welcome to Payooo!</h1>
-        <p class="text-[#08080880]">Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
+        <p class="text-[#08080880]">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
       </div>
-  
+
       <div class="mt-6 grid grid-cols-3 gap-4 p-3">
-        <div class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100">
-          <img src="./assets/wallet1.png" alt="" class="mx-auto">
+        <div
+          class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100"
+        >
+          <img src="./assets/wallet1.png" alt="" class="mx-auto" />
           <p class="text-[#080808]/70 text-center">Add Money</p>
         </div>
-        <div class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100">
-          <img src="./assets/cashout.png" alt="" class="mx-auto">
+        <div
+          class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100"
+        >
+          <img src="./assets/cashout.png" alt="" class="mx-auto" />
           <p class="text-[#080808]/70 text-center">Cashout</p>
         </div>
-        <div class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100">
-          <img src="./assets/transfer.png" alt="" class="mx-auto">
+        <div
+          class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100"
+        >
+          <img src="./assets/transfer.png" alt="" class="mx-auto" />
           <p class="text-[#080808]/70 text-center">Transfer Money</p>
         </div>
-        <div class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100">
-          <img src="./assets/bonus1.png" alt="" class="mx-auto">
+        <div
+          class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100"
+        >
+          <img src="./assets/bonus1.png" alt="" class="mx-auto" />
           <p class="text-[#080808]/70 text-center">Get Bonus</p>
         </div>
-        <div class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100">
-          <img src="./assets/paybill.png" alt="" class="mx-auto">
+        <div
+          class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100"
+        >
+          <img src="./assets/paybill.png" alt="" class="mx-auto" />
           <p class="text-[#080808]/70 text-center">Pay Bill</p>
         </div>
-        <div class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100">
-          <img src="./assets/transaction1.png" alt="" class="mx-auto">
+        <div
+          class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100"
+        >
+          <img src="./assets/transaction1.png" alt="" class="mx-auto" />
           <p class="text-[#080808]/70 text-center">Transaction</p>
         </div>
-        
-  
       </div>
     </div>
-    
-    <div class="form-section">
+
+    <div class="form-section max-w-lg mx-auto">
       <div>
-        <h1>Add Money</h1>
-        <form action="">
-          <div>
-            <h1>Select A Bank</h1>
-            
+        <h1 class="text-[#080808] font-medium text-xl p-3">Add Money</h1>
+        <form action="" class="bg-white rounded-2xl p-6">
+          <div class="mb-4">
+            <label class="text-[#080808] font-medium">Select A Bank</label>
+            <select class="select bg-[#F4F5F7] rounded-full w-full mt-3">
+              <option disabled selected>Select bank</option>
+              <option>AB Bank</option>
+              <option>IFIC Bank</option>
+              <option>Trust Bank</option>
+            </select>
           </div>
+
+          <div class="mb-4">
+            <label for="" class="text-[#080808] font-medium"
+              >Bank Account Number</label
+            >
+            <input
+              id="bank-account-number"
+              type="text"
+              placeholder="Enter 11 digit account number"
+              class="input input-ghost bg-[#F4F5F7] rounded-full w-full mt-2"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="" class="text-[#080808] font-medium"
+              >Amount to Add</label
+            >
+            <input
+              id="amount"
+              type="text"
+              placeholder="Add Amount to withdraw"
+              class="input input-ghost bg-[#F4F5F7] rounded-full w-full mt-2"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="" class="text-[#080808] font-medium">Pin Number</label>
+            <input
+              id="pin-number"
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input input-ghost bg-[#F4F5F7] rounded-full w-full mt-2"
+            />
+          </div>
+
+          <button
+            id="addMoney-btn"
+            class="btn bg-[#0874F2] text-white rounded-full w-full p-6"
+          >
+            Add Money
+          </button>
         </form>
       </div>
     </div>
