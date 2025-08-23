@@ -1,15 +1,12 @@
-const validPin = 1234
+const validPin = 1234;
 document
   .getElementById("add-money-btn")
   .addEventListener("click", function (e) {
     e.preventDefault();
 
-    const bank = document.getElementById("bank").value;
-    const accountNumber = 
-      document.getElementById("account-number").value
-    ;
-    const amount = parseInt(document.getElementById("add-amount").value);
-    const pin = parseInt(document.getElementById("add-pin").value);
+    const accountNumber = document.getElementById("account-number").value;
+    const amount = getInputValueNumber("add-amount")
+    const pin = getInputValueNumber("add-pin")
 
     const availableBalance = parseInt(
       document.getElementById("available-balance").innerText
@@ -29,3 +26,21 @@ document
 
     document.getElementById("available-balance").innerText = totalNewBalance;
   });
+
+// toggling
+
+document.getElementById("add-money").addEventListener("click", function () {
+  document.getElementById("cashout-parent").style.display = "none";
+  document.getElementById("add-money-parent").style.display = "block";
+});
+document.getElementById("cashout").addEventListener("click", function () {
+  document.getElementById("add-money-parent").style.display = "none";
+  document.getElementById("cashout-parent").style.display = "block";
+});
+
+function getInputValueNumber(id) {
+  const inputField = document.getElementById(id);
+  const inputFieldValue = inputField.value;
+  const inputFieldValueNumber = parseInt(inputFieldValue);
+  return inputFieldValueNumber;
+}

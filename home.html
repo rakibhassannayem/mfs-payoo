@@ -21,7 +21,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-[#F4F5F7]">
+  <body class="bg-[#F4F5F7] h-[100vh]">
     <div class="bg-white max-w-lg mx-auto rounded-b-2xl">
       <div
         class="flex items-center justify-between border-b border-gray-300 p-3"
@@ -52,13 +52,13 @@
       </div>
 
       <div class="mt-6 grid grid-cols-3 gap-4 p-3">
-        <div
+        <div id="add-money"
           class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100"
         >
           <img src="./assets/wallet1.png" alt="" class="mx-auto" />
           <p class="text-[#080808]/70 text-center">Add Money</p>
         </div>
-        <div
+        <div id="cashout"
           class="border border-[#0808081A] rounded-lg p-4 cursor-pointer hover:bg-blue-100"
         >
           <img src="./assets/cashout.png" alt="" class="mx-auto" />
@@ -92,7 +92,8 @@
     </div>
 
     <div class="form-section max-w-lg mx-auto">
-      <div>
+      <!-- add money -->
+      <div id="add-money-parent">
         <h1 class="text-[#080808] font-medium text-xl p-3">Add Money</h1>
         <form action="" class="bg-white rounded-2xl p-6">
           <div class="mb-4">
@@ -147,6 +148,54 @@
           </button>
         </form>
       </div>
+
+      <!-- cashout -->
+       <div id="cashout-parent" style="display: none;">
+        <h1 class="text-[#080808] font-medium text-xl p-3">Cashout</h1>
+        <form action="" class="bg-white rounded-2xl p-6">
+
+          <div class="mb-4">
+            <label for="" class="text-[#080808] font-medium"
+              >Agent Number</label
+            >
+            <input
+              id="agent-number"
+              type="text"
+              placeholder="Enter 11 digit number"
+              class="input input-ghost bg-[#F4F5F7] rounded-full w-full mt-2"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="" class="text-[#080808] font-medium"
+              >Amount</label
+            >
+            <input
+              id="cashout-amount"
+              type="text"
+              placeholder="Enter amount to withdraw"
+              class="input input-ghost bg-[#F4F5F7] rounded-full w-full mt-2"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="" class="text-[#080808] font-medium">Pin Number</label>
+            <input
+              id="cashout-pin"
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input input-ghost bg-[#F4F5F7] rounded-full w-full mt-2"
+            />
+          </div>
+
+          <button
+            id="withdraw-btn"
+            class="btn bg-[#0874F2] text-white rounded-full w-full p-6"
+          >
+            Withdraw Money
+          </button>
+        </form>
+       </div>
     </div>
     <script src="./home.js"></script>
   </body>
