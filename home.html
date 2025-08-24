@@ -297,7 +297,7 @@
               >Biller Account Number</label
             >
             <input
-              id="agent-number"
+              id="biller-account-number"
               type="text"
               placeholder="Enter 11 digit number"
               class="input input-ghost bg-[#F4F5F7] rounded-full w-full mt-2"
@@ -305,7 +305,9 @@
           </div>
 
           <div class="mb-4">
-            <label for="" class="text-[#080808] font-medium">Amount to Pay</label>
+            <label for="" class="text-[#080808] font-medium"
+              >Amount to Pay</label
+            >
             <input
               id="pay-bill-amount"
               type="text"
@@ -331,6 +333,20 @@
             Pay Now
           </button>
         </form>
+      </div>
+
+      <!-- transactions -->
+      <div class="form" id="transaction-parent" style="display: none">
+        <div class="flex items-center justify-between p-3">
+          <h1 class="text-[#080808] font-medium text-xl">
+            Transaction History
+          </h1>
+          <p class="text-[#08080880] text-lg cursor-pointer">View All</p>
+        </div>
+        <div id="transaction-container">
+          
+        </div>
+        
       </div>
     </div>
     <script src="./home.js"></script>
