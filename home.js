@@ -1,3 +1,7 @@
+document.getElementById("logout-btn").addEventListener("click", function () {
+  window.location.href="./index.html"
+});
+
 const validPin = 1234;
 const transactionData = [];
 // add money features
@@ -7,18 +11,24 @@ document
     e.preventDefault();
 
     const accountNumber = getInputValue("account-number");
-    const amount = getInputValueNumber("add-amount");
-    const pin = getInputValueNumber("add-pin");
-    const availableBalance = getInnerText("available-balance");
-
     if (accountNumber.length !== 11) {
       alert("Please enter a valid account number!");
       return;
     }
+
+    const amount = getInputValueNumber("add-amount");
+    if (amount < 1) {
+      alert("Invalid amount!");
+      return;
+    }
+
+    const pin = getInputValueNumber("add-pin");
     if (pin !== validPin) {
       alert("Please enter a valid pin number!");
       return;
     }
+
+    const availableBalance = getInnerText("available-balance");
 
     const totalNewBalance = availableBalance + amount;
     setInnerText(totalNewBalance);
@@ -39,6 +49,10 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
   const availableBalance = getInnerText("available-balance");
   const amount = getInputValueNumber("cashout-amount");
 
+  if (amount < 1 || amount < availableBalance) {
+    alert("Invalid amount!");
+    return;
+  }
   if (agentNumber.length !== 11) {
     alert("Please enter a valid agent number!");
     return;
@@ -142,7 +156,7 @@ document.getElementById("pay-bill-btn").addEventListener("click", function (e) {
 document.getElementById("transaction").addEventListener("click", function (e) {
   e.preventDefault();
   const transactionContainer = document.getElementById("transaction-container");
-  
+
   transactionContainer.innerText = "";
 
   for (const data of transactionData) {
