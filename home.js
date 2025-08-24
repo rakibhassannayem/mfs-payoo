@@ -67,6 +67,24 @@ document.getElementById("transfer-btn").addEventListener("click", function (e) {
   setInnerText(totalNewBalance);
 });
 
+// Bonus features
+document.getElementById("bonus-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const coupon = getInputValue("coupon");
+  const availableBalance = getInnerText("available-balance");
+
+  if (coupon.length !== 6) {
+    alert("The coupon must be 6 digits");
+    return;
+  }else{
+    alert("Congratulations! you've won 500tk.")
+  }
+
+  const totalNewBalance = availableBalance + 500;
+  setInnerText(totalNewBalance);
+});
+
 // toggling
 document.getElementById("add-money").addEventListener("click", function () {
   handleToggle("add-money-parent");
@@ -81,6 +99,11 @@ document.getElementById("cashout").addEventListener("click", function () {
 document.getElementById("transfer").addEventListener("click", function () {
   handleToggle("transfer-parent");
   handleButtonToggle("transfer");
+});
+
+document.getElementById("bonus").addEventListener("click", function () {
+  handleToggle("bonus-parent");
+  handleButtonToggle("bonus");
 });
 
 // funcitons to get input values
